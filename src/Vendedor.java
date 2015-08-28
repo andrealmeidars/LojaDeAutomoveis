@@ -1,7 +1,7 @@
 import Types.*;
 
 public class Vendedor  extends Funcionario {
-    private double salarioBruto = 2.000;
+    private double salarioBruto = 2000;
     private double totalVendasMes;
     private String cargo = "Vendedor";
 
@@ -21,8 +21,10 @@ public class Vendedor  extends Funcionario {
     }
 
 
-    public double retornaSalarioFinal(){
-        return  salarioBruto +   totalVendasMes * 10/100    ;
+    public double calculaBonificacao(){
+
+        return  salarioBruto +  (totalVendasMes * 10/100);
+
 
     }
 

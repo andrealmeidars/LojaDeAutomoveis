@@ -2,8 +2,8 @@
 public class Imprime {
 
 
-    public void imprimeSalarioFuncionario(Funcionario func){
-        System.out.println(   func.      );
+    public void imprimeBonificacao (Funcionario funcionario){
+        System.out.println(funcionario.calculaBonificacao()      );
 
 
 

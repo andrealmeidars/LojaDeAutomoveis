@@ -25,6 +25,9 @@ abstract class Funcionario {
 
     }
 
+    abstract double calculaBonificacao();
+    abstract void setTotalVendasMes(double valor);
+
 
 
 }
