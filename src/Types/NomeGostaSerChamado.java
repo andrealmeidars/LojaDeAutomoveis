@@ -1,10 +1,10 @@
 package Types;
 
 
-public class GostaSerChamado {
+public class NomeGostaSerChamado {
     private String nomeFavorito;
 
-    public GostaSerChamado(String nomeFavorito){
+    public NomeGostaSerChamado(String nomeFavorito){
         this.nomeFavorito = nomeFavorito;
     }
 

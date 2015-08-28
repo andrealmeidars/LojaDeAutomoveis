@@ -4,11 +4,11 @@ package Types;
 public class NumeroCasa {
     private int numeroCasa;
 
-    public NumeroCasa (){
-        this.numeroCasa = numeroCasa;
+    public NumeroCasa(int numero){
+        this.numeroCasa = numero;
     }
 
-    public int getNumeroCasa(){
+    public int geNumero(){
         return this.numeroCasa;
     }
 }
