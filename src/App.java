@@ -1,5 +1,5 @@
+import TiposFuncionarios.Contador;
 import TiposFuncionarios.Pessoa;
-import TiposFuncionarios.Vendedor;
 import Types.*;
 
 public class App {
@@ -16,11 +16,17 @@ public class App {
                 new Complemento("Fundos"), new Bairro("Chacara")) {
         };
 
-        Vendedor vendedor = new Vendedor(pessoa);
-        vendedor.setTotalVendasMes(1000);
+//        Vendedor vendedor = new Vendedor(pessoa);
+//        vendedor.setTotalVendasMes(1000);
+//        imprime.imprimeNaTela(vendedor.retornaTipoFuncionario() + " - " + vendedor.calculaBonificacao());
+
+        Contador contador = new Contador(pessoa);
+        contador.setAbonoFixo(7000);
+        imprime.imprimeNaTela(contador.retornaTipoFuncionario() + " - " + contador.calculaBonificacao());
 
 
-        imprime.imprimeNaTela(vendedor.retornaTipoFuncionario() + " - " + vendedor.calculaBonificacao());
+
+
 
 
 
