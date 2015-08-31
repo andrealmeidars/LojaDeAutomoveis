@@ -1,3 +1,5 @@
+package TiposFuncionarios;
+
 import Types.*;
 
 public class Pessoa {
@@ -34,7 +36,14 @@ public class Pessoa {
     }
 
     public SobreNome getSobreNome() {
+            if (sobreNome == null) {
+                return null;
+            }
         return sobreNome;
+    }
+
+    public void setSobreNome(SobreNome sobreNome) {
+        this.sobreNome = sobreNome;
     }
 
     public NomeGostaSerChamado getNomeGostaSerChamado() {

@@ -1,3 +1,5 @@
+import TiposFuncionarios.Pessoa;
+import TiposFuncionarios.Vendedor;
 import Types.*;
 
 public class App {
@@ -18,7 +20,9 @@ public class App {
         vendedor.setTotalVendasMes(1000);
 
 
-        imprime.imprimeNaTela(vendedor.retornaTipoFuncionario() + " - "  + vendedor.calculaBonificacao());
+        imprime.imprimeNaTela(vendedor.retornaTipoFuncionario() + " - " + vendedor.calculaBonificacao());
+
+
 
     }
 }
