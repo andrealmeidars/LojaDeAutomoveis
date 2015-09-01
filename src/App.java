@@ -13,8 +13,11 @@ public class App {
 
         Pessoa pessoa = new Pessoa(new NumeroCadastro(123), new Nome("Joao"), new SobreNome("Amadeu"),
                 new NomeGostaSerChamado("Jo"), new Rua("Rua das Flores"), new NumeroCasa(12),
-                new Complemento("Fundos"), new Bairro("Chacara")) {
-        };
+                new Complemento("Fundos"), new Bairro("Chacara"));
+
+        System.out.print(pessoa.getNome());
+
+
 
 //        Vendedor vendedor = new Vendedor(pessoa);
 //        vendedor.setTotalVendasMes(1000);
@@ -27,7 +30,9 @@ public class App {
 
         Advogado advogado = new Advogado(pessoa);
         advogado.setAbonoFixo(9000);
-        imprime.imprimeNaTela(advogado.retornaTipoFuncionario() + " - " + advogado.calculaBonificacao());
+        //imprime.imprimeNaTela(advogado.retornaTipoFuncionario() + " - " + advogado.calculaBonificacao());
+
+        //System.out.print(advogado.getNome());
 
 
 

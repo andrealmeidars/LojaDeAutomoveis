@@ -13,8 +13,8 @@ public class ContadorTeste {
 
     Pessoa pessoa = new Pessoa(new NumeroCadastro(123), new Nome("Joao"), new SobreNome("Amadeu"),
             new NomeGostaSerChamado("Jo"), new Rua("Rua das Flores"), new NumeroCasa(12),
-            new Complemento("Fundos"), new Bairro("Chacara")) {
-    };
+            new Complemento("Fundos"), new Bairro("Chacara"));
+
 
     Contador contador = new Contador(pessoa);
 

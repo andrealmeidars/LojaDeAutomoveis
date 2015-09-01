@@ -32,6 +32,7 @@ public class Pessoa {
         return numeroCadastro;
     }
 
+
     public Nome getNome() {
         return nome;
     }
@@ -55,6 +56,22 @@ public class Pessoa {
         return rua;
     }
 
+
+
+    public double getNummeroCadastro() {
+         return numeroCadastro.getNumero();
+    }
+
+    public String retornaNome(){
+        return nome.getNome();
+    }
+
+
+
+
+
+
+
     public NumeroCasa getNumeroCasa() {
         return numeroCasa;
     }
@@ -67,8 +84,7 @@ public class Pessoa {
         return bairro;
     }
 
-   // abstract double calculaBonificacao();
-    //abstract void setTotalVendasMes(double valor);
+
 
 
 

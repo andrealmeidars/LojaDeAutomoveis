@@ -25,7 +25,13 @@ public class Advogado extends Pessoa implements Bonifica {
 
     }
 
+
+
+
+
     public void setAbonoFixo(double value){
         this.abonoFixo = value;
     }
+
+
 }

@@ -8,6 +8,6 @@ public class Nome {
     }
     
     public String getNome(){
-        return this.nome;
+        return nome;
     }
 }

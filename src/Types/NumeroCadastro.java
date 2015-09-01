@@ -2,13 +2,13 @@ package Types;
 
 
 public class NumeroCadastro {
-    private int numero;
+    private double numero;
 
-    public NumeroCadastro(int numero){
+    public NumeroCadastro(double numero){
         this.numero = numero;
     }
 
-    public int geNumero(){
-        return this.numero;
+    public double getNumero(){
+        return numero;
     }
 }
