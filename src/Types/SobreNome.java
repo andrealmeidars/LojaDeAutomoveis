@@ -1,13 +1,13 @@
 package Types;
 
 public class SobreNome {
-    private String sobreNome;
+    private String value;
 
-    public SobreNome(String sobreNome){
-        this.sobreNome = sobreNome;
+    public SobreNome(String value){
+        this.value = value;
     }
 
-    public String getNome(){
-        return this.sobreNome;
+    public String getValue(){
+        return this.value;
     }
 }

@@ -1,13 +1,13 @@
 package Types;
 
 public class Nome {
-    private String nome;
+    private String value;
 
-    public Nome(String nome){
-        this.nome = nome;
+    public Nome(String value){
+        this.value = value;
     }
     
-    public String getNome(){
-        return nome;
+    public String getValue(){
+        return value;
     }
 }

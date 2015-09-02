@@ -2,13 +2,13 @@ package Types;
 
 
 public class NumeroCasa {
-    private double numeroCasa;
+    private double value;
 
-    public NumeroCasa(double numero){
-        this.numeroCasa = numero;
+    public NumeroCasa(double value){
+        this.value = value;
     }
 
-    public double getNumero(){
-        return this.numeroCasa;
+    public double getValue(){
+        return this.value;
     }
 }

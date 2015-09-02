@@ -1,13 +1,13 @@
 package Types;
 
 public class Rua {
-    private String nomeRua;
+    private String value;
 
-    public Rua(String nomeRua){
-        this.nomeRua = nomeRua;
+    public Rua(String value){
+        this.value = value;
     }
 
-    public String getNomeRua(){
-        return this.nomeRua;
+    public String getValue(){
+        return this.value;
     }
 }

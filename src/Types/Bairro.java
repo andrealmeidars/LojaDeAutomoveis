@@ -1,13 +1,13 @@
 package Types;
 
 public class Bairro {
-    private String bairro;
+    private String value;
 
-    public Bairro(String bairro){
-        this.bairro = bairro;
+    public Bairro(String value){
+        this.value = value;
     }
 
-    public String getBairro(){
-        return this.bairro;
+    public String getValue(){
+        return this.value;
     }
 }

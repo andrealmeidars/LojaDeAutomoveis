@@ -2,13 +2,13 @@ package Types;
 
 
 public class Complemento {
-    private String complemento;
+    private String value;
 
-    public Complemento(String complemento){
-        this.complemento = complemento;
+    public Complemento(String value){
+        this.value = value;
     }
 
-    public String getComplemento(){
-        return this.complemento;
+    public String getValue(){
+        return this.value;
     }
 }

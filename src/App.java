@@ -15,7 +15,7 @@ public class App {
                 new NomeGostaSerChamado("Jo"), new Rua("Rua das Flores"), new NumeroCasa(12),
                 new Complemento("Fundos"), new Bairro("Chacara"));
 
-        System.out.print(pessoa.getNome());
+        System.out.print(pessoa.getBairro());
 
 
 

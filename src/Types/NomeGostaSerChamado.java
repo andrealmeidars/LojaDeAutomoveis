@@ -2,13 +2,13 @@ package Types;
 
 
 public class NomeGostaSerChamado {
-    private String nomeFavorito;
+    private String value;
 
-    public NomeGostaSerChamado(String nomeFavorito){
-        this.nomeFavorito = nomeFavorito;
+    public NomeGostaSerChamado(String value){
+        this.value = value;
     }
 
-    public String getNome(){
-        return this.nomeFavorito;
+    public String getValue(){
+        return this.value;
     }
 }
