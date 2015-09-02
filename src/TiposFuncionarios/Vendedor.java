@@ -1,46 +1,73 @@
 package TiposFuncionarios;
 
-public class Vendedor extends Pessoa implements Bonifica {
-    private double salarioBruto;
+import Types.DadosCadastraisFuncionario;
+import Types.ImprimeTela;
+import Types.NomeFuncionario;
+
+public class Vendedor  implements Bonifica{
+    private ImprimeTela imprime;
+    private NomeFuncionario nomeFuncionario;
+    private  DadosCadastraisFuncionario dadosCadastraisFuncionario;
     private double totalVendasMes = 0;
-    private String tipoFuncionario = "Vendedor";
+    private String tipoFuncionario;
 
 
-//    public TiposFuncionarios.Vendedor( NumeroCadastro numeroCadastro, Nome nome, SobreNome sobreNome,
-//                     NomeGostaSerChamado nomeGostaSerChamado,
-//                     Rua rua, NumeroCasa numeroCasa, Complemento complemento, Bairro bairro){
-//        super(numeroCadastro, nome, sobreNome, nomeGostaSerChamado, rua, numeroCasa, complemento, bairro);
-//    }
-
-
-    public Vendedor (Pessoa pessoa){
-        super(pessoa.getNumeroCadastro(), pessoa.getNome(), pessoa.getSobreNome(),
-                pessoa.getNomeGostaSerChamado(), pessoa.getRua(), pessoa.getNumeroCasa(), pessoa.getComplemento(),
-                pessoa.getBairro());
-        this.salarioBruto = 2000;
+    public Vendedor (NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario) {
+        this.nomeFuncionario = nomeFuncionario;
+        this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
+        this.tipoFuncionario = "Vendedor";
 
     }
 
-    public String retornaTipoFuncionario(){
+    public String getNome (){
+        return nomeFuncionario.getNome();
+    }
+
+    public String getTipoFuncionario(){
         return tipoFuncionario;
     }
 
-
-    public void setTotalVendasMes(double valor){
-        this.totalVendasMes = valor;
+    public String getSobreNome(){
+        return nomeFuncionario.getSobreNome();
     }
 
-    public double retornaSalario(){
-        return salarioBruto;
+    public String gerNomeQueMaisGosta(){
+        return nomeFuncionario.getNomeQueMaisGosta();
+    }
+
+    public String getNomeRua(){
+        return dadosCadastraisFuncionario.getRua();
+    }
+
+    public double getNumeroCasa(){
+        return dadosCadastraisFuncionario.getNumeroCasa();
+    }
+
+    public String getComplemento(){
+        return dadosCadastraisFuncionario.getComplemento();
+    }
+
+    public String getBairro(){
+        return dadosCadastraisFuncionario.getBairro();
+    }
+
+    public void setTotalVendasMes(double totalVendasMes){
+        this.totalVendasMes = totalVendasMes;
+    }
+
+    public void enviaParaImpressaoSalario(ImprimeTela imprime){
+       // System.out.print"dentro da funcao");
+        imprime.imprimeNatela(this.getTipoFuncionario(), calculaBonificacao());
     }
 
 
-    public double calculaBonificacao(){
-            if (totalVendasMes == 0) {
-                    throw new NullPointerException();
-            }
-        return  salarioBruto +  (totalVendasMes * 10/100);
+
+    public double calculaBonificacao() {
+
+            if (totalVendasMes < 0) {
+                return dadosCadastraisFuncionario.getSalarioBruto();
+        }
+        // 10% do total de vendas
+       return  dadosCadastraisFuncionario.getSalarioBruto() + ((totalVendasMes * 10)/100);
     }
-
-
 }

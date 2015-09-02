@@ -1,48 +1,38 @@
-import TiposFuncionarios.Advogado;
-import TiposFuncionarios.Pessoa;
-import Types.*;
+import TiposFuncionarios.Contador;
+import TiposFuncionarios.Vendedor;
+import Types.AbonoMensalFixo;
+import Types.DadosCadastraisFuncionario;
+import Types.ImprimeTela;
+import Types.NomeFuncionario;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Imprime imprime = new Imprime();
+        ImprimeTela imprime = new ImprimeTela();
 
 
 
 
-        Pessoa pessoa = new Pessoa(new NumeroCadastro(123), new Nome("Joao"), new SobreNome("Amadeu"),
-                new NomeGostaSerChamado("Jo"), new Rua("Rua das Flores"), new NumeroCasa(12),
-                new Complemento("Fundos"), new Bairro("Chacara"));
+        Vendedor vendedor = new Vendedor(
+                new NomeFuncionario(234, "Pedro",  "Assis", "Pedrao")  ,
+                new DadosCadastraisFuncionario("Flores Dias ", 122, "fundos", " Tristeza", 2000 )
+        );
 
-        System.out.print(pessoa.getBairro());
+        vendedor.setTotalVendasMes(1000);
+        vendedor.enviaParaImpressaoSalario(imprime);
 
+        Contador contador = new Contador(
+                new NomeFuncionario(234, "Pedro",  "Assis", "Pedrao")  ,
+                new DadosCadastraisFuncionario("Flores Dias ", 122, "fundos", " Tristeza", 1500 ) ,
+                new AbonoMensalFixo(4000)
+        );
 
-
-//        Vendedor vendedor = new Vendedor(pessoa);
-//        vendedor.setTotalVendasMes(1000);
-//        imprime.imprimeNaTela(vendedor.retornaTipoFuncionario() + " - " + vendedor.calculaBonificacao());
-
-//        Contador contador = new Contador(pessoa);
-//        contador.setAbonoFixo(7000);
-//        imprime.imprimeNaTela(contador.retornaTipoFuncionario() + " - " + contador.calculaBonificacao());
-
-
-        Advogado advogado = new Advogado(pessoa);
-        advogado.setAbonoFixo(9000);
-        //imprime.imprimeNaTela(advogado.retornaTipoFuncionario() + " - " + advogado.calculaBonificacao());
-
-        //System.out.print(advogado.getNome());
+        contador.enviaParaImpressaoSalario(imprime);
 
 
 
-
-
-
-
-
-
-    }
+ }
 }
 
 
