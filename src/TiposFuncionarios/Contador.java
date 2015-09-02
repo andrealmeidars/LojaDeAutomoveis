@@ -54,7 +54,7 @@ public class Contador implements Bonifica {
     }
 
     public void enviaParaImpressaoSalario(ImprimeTela imprime){
-        // System.out.print"dentro da funcao");
+
         imprime.imprimeNatela(this.getTipoFuncionario(), calculaBonificacao());
     }
 

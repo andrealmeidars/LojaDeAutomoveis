@@ -18,6 +18,7 @@ public class Vendedor  implements Bonifica{
         this.tipoFuncionario = "Vendedor";
 
 
+
     }
 
     public String getNome (){
@@ -26,6 +27,10 @@ public class Vendedor  implements Bonifica{
 
     public String getTipoFuncionario(){
         return tipoFuncionario;
+    }
+
+    public double getTotalVendasMes(){
+        return totalVendasMes;
     }
 
     public String getSobreNome(){
@@ -65,10 +70,11 @@ public class Vendedor  implements Bonifica{
 
     public double calculaBonificacao() {
 
-            if (totalVendasMes < 0) {
+            if (getTotalVendasMes() <= 0) {
                 throw  new NullPointerException();
         }
         // 10% do total de vendas
        return  dadosCadastraisFuncionario.getSalarioBruto() + ((totalVendasMes * 10)/100);
+
     }
 }
