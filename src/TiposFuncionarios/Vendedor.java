@@ -33,29 +33,6 @@ public class Vendedor  implements Bonifica{
         return totalVendasMes;
     }
 
-    public String getSobreNome(){
-        return nomeFuncionario.getSobreNome();
-    }
-
-    public String gerNomeQueMaisGosta(){
-        return nomeFuncionario.getNomeQueMaisGosta();
-    }
-
-    public String getNomeRua(){
-        return dadosCadastraisFuncionario.getRua();
-    }
-
-    public double getNumeroCasa(){
-        return dadosCadastraisFuncionario.getNumeroCasa();
-    }
-
-    public String getComplemento(){
-        return dadosCadastraisFuncionario.getComplemento();
-    }
-
-    public String getBairro(){
-        return dadosCadastraisFuncionario.getBairro();
-    }
 
     public void setTotalVendasMes(double totalVendasMes){
         this.totalVendasMes = totalVendasMes;
@@ -63,7 +40,7 @@ public class Vendedor  implements Bonifica{
 
     public void enviaParaImpressaoSalario(ImprimeTela imprime){
        // System.out.print"dentro da funcao");
-        imprime.imprimeNatela(this.getTipoFuncionario(), calculaBonificacao());
+        imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
     }
 
 

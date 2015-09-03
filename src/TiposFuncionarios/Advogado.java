@@ -6,18 +6,19 @@ import Types.DadosCadastraisFuncionario;
 import Types.ImprimeTela;
 import Types.NomeFuncionario;
 
-public class Contador implements Bonifica {
+public class Advogado implements Bonifica{
     private ImprimeTela imprime;
     private NomeFuncionario nomeFuncionario;
     private DadosCadastraisFuncionario dadosCadastraisFuncionario;
     private AbonoMensalFixo abonoMensalFixo;
     private String tipoFuncionario;
 
-    public Contador(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario, AbonoMensalFixo abono){
+
+    public Advogado(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario, AbonoMensalFixo abono){
         this.nomeFuncionario = nomeFuncionario;
         this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
         this.abonoMensalFixo = abono;
-        this.tipoFuncionario = "Contador";
+        this.tipoFuncionario = "Advogado";
     }
 
     public String getNome (){
@@ -39,6 +40,4 @@ public class Contador implements Bonifica {
 
         return  dadosCadastraisFuncionario.getSalarioBruto() + abonoMensalFixo.getAbonoMensalFixo();
     }
-
-
 }

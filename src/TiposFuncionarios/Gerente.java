@@ -6,18 +6,18 @@ import Types.DadosCadastraisFuncionario;
 import Types.ImprimeTela;
 import Types.NomeFuncionario;
 
-public class Contador implements Bonifica {
+public class Gerente implements Bonifica {
     private ImprimeTela imprime;
     private NomeFuncionario nomeFuncionario;
     private DadosCadastraisFuncionario dadosCadastraisFuncionario;
     private AbonoMensalFixo abonoMensalFixo;
     private String tipoFuncionario;
 
-    public Contador(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario, AbonoMensalFixo abono){
+    public Gerente(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario, AbonoMensalFixo abono){
         this.nomeFuncionario = nomeFuncionario;
         this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
         this.abonoMensalFixo = abono;
-        this.tipoFuncionario = "Contador";
+        this.tipoFuncionario = "Gerente";
     }
 
     public String getNome (){

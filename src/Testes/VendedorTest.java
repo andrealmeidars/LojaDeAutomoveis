@@ -18,7 +18,7 @@ public class VendedorTest {
                 new DadosCadastraisFuncionario("Flores Dias ", 122, "fundos", " Tristeza", 2000 )
         );
 
-        
+
         vendedor.calculaBonificacao();
 
 
