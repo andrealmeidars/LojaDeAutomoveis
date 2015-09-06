@@ -13,7 +13,7 @@ public class App {
         ImprimeTela imprime = new ImprimeTela();
 
 
-
+        
 
         Vendedor vendedor = new Vendedor(
                 new NomeFuncionario(234, "Pedro",  "Assis", "Pedrao")  ,
