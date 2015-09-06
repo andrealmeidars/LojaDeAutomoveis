@@ -1,10 +1,7 @@
 import TiposFuncionarios.Contador;
 import TiposFuncionarios.Gerente;
 import TiposFuncionarios.Vendedor;
-import Types.AbonoMensalFixo;
-import Types.DadosCadastraisFuncionario;
-import Types.ImprimeTela;
-import Types.NomeFuncionario;
+import Types.*;
 
 public class App {
 
@@ -13,21 +10,17 @@ public class App {
         ImprimeTela imprime = new ImprimeTela();
 
 
-//
-//        public Vendedor(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario) {
-//            this.nomeFuncionario = nomeFuncionario;
-//            this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
-//            this.tipoFuncionario =
+
+     Vendedor vendedor = new Vendedor(
+             new Id(1234),
+             new CompleteName("Joao", "Gonçalves"),
+             new LikeName("Jo"),
+             new Address("Rua x", 122, "Fundos", "Tristeza"),
+             new TypeOfEmployee("Vendedor"),
+             new Salary(1200)
+    );
 
 
-
-
-
-
-        Vendedor vendedor = new Vendedor(
-                new NomeFuncionario(234, "Pedro",  "Assis", "Pedrao")  ,
-                new DadosCadastraisFuncionario("Flores Dias ", 122, "fundos", " Tristeza", 2000 )
-        );
 
         vendedor.setTotalVendasMes(1000);
         vendedor.enviaParaImpressaoSalario(imprime);
