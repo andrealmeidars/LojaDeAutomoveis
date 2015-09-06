@@ -13,7 +13,16 @@ public class App {
         ImprimeTela imprime = new ImprimeTela();
 
 
-        
+//
+//        public Vendedor(NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario) {
+//            this.nomeFuncionario = nomeFuncionario;
+//            this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
+//            this.tipoFuncionario =
+
+
+
+
+
 
         Vendedor vendedor = new Vendedor(
                 new NomeFuncionario(234, "Pedro",  "Assis", "Pedrao")  ,

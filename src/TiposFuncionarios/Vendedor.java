@@ -1,57 +1,42 @@
 package TiposFuncionarios;
 
-import Types.DadosCadastraisFuncionario;
-import Types.ImprimeTela;
-import Types.NomeFuncionario;
+import Types.*;
 
 public class Vendedor  implements Bonifica{
     private ImprimeTela imprime;
-    private NomeFuncionario nomeFuncionario;
-    private  DadosCadastraisFuncionario dadosCadastraisFuncionario;
+    private Id id;
+    private CompleteName completeName;
+    private LikeName likeName;
+    private Address address;
+    private TypeOfEmployee typeOfEmployee;
+    private Salary salary;
     private double totalVendasMes = 0;
-    private String tipoFuncionario;
 
 
-    public Vendedor (NomeFuncionario nomeFuncionario, DadosCadastraisFuncionario dadosCadastraisFuncionario) {
-        this.nomeFuncionario = nomeFuncionario;
-        this.dadosCadastraisFuncionario = dadosCadastraisFuncionario;
-        this.tipoFuncionario = "Vendedor";
-
-
-
+    public Vendedor(Id id, CompleteName completeName, LikeName likeName, Address address, TypeOfEmployee typeOfEmployee, Salary salary) {
+        this. id = id;
+        this.completeName = completeName;
+        this.likeName = likeName;
+        this.address = address;
+        this.typeOfEmployee = typeOfEmployee;
+        this.salary = salary;
     }
 
-    public String getNome (){
-        return nomeFuncionario.getNome();
-    }
-
-    public String getTipoFuncionario(){
-        return tipoFuncionario;
-    }
-
-    public double getTotalVendasMes(){
-        return totalVendasMes;
-    }
-
-
-    public void setTotalVendasMes(double totalVendasMes){
-        this.totalVendasMes = totalVendasMes;
-    }
 
     public void enviaParaImpressaoSalario(ImprimeTela imprime){
        // System.out.print"dentro da funcao");
-        imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
+       // imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
     }
 
 
 
     public double calculaBonificacao() {
 
-            if (getTotalVendasMes() <= 0) {
-                throw  new NullPointerException();
-        }
-        // 10% do total de vendas
-       return  dadosCadastraisFuncionario.getSalarioBruto() + ((totalVendasMes * 10)/100);
-
+//            if (getTotalVendasMes() <= 0) {
+//                throw  new NullPointerException();
+//        }
+//        // 10% do total de vendas
+//       return  dadosCadastraisFuncionario.getSalarioBruto() + ((totalVendasMes * 10)/100);
+    return 0;
     }
 }
