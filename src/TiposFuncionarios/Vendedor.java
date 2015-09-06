@@ -22,6 +22,10 @@ public class Vendedor  implements Bonifica{
         this.salary = salary;
     }
 
+    public void setTotalVendasMes(double value){
+        this.totalVendasMes = value;
+    }
+
 
     public void enviaParaImpressaoSalario(ImprimeTela imprime){
        // System.out.print"dentro da funcao");

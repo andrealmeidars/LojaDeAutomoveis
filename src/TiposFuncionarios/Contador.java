@@ -1,10 +1,7 @@
 package TiposFuncionarios;
 
 
-import Types.AbonoMensalFixo;
-import Types.DadosCadastraisFuncionario;
 import Types.ImprimeTela;
-import Types.NomeFuncionario;
 
 public class Contador implements Bonifica {
     private ImprimeTela imprime;

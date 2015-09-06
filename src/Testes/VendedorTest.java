@@ -1,9 +1,7 @@
 package Testes;
 
 import TiposFuncionarios.Vendedor;
-import Types.DadosCadastraisFuncionario;
 import Types.ImprimeTela;
-import Types.NomeFuncionario;
 import org.junit.Test;
 
 public class VendedorTest {
