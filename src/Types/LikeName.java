@@ -2,7 +2,7 @@ package Types;
 
 
 public class LikeName {
-    private String likeName;
+    private final String likeName;
 
     public LikeName(String likeName) {
         this.likeName = likeName;

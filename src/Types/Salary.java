@@ -1,7 +1,7 @@
 package Types;
 
 public class Salary {
-    private double salary;
+    private final double salary;
 
     public Salary(double salary) {
         this.salary = salary;

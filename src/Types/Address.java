@@ -2,10 +2,10 @@ package Types;
 
 
 public class Address {
-    private String street;
-    private double number;
-    private String complement;
-    private  String neighborhood;
+    private final String street;
+    private final double number;
+    private final String complement;
+    private  final String neighborhood;
 
     public Address(String street, double number, String complement, String neighborhood) {
         this.street = street;

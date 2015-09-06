@@ -2,7 +2,7 @@ package Types;
 
 
 public class Id {
-    private  double value;
+    private final double value;
 
     public Id(double value) {
         this.value = value;

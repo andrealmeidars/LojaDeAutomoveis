@@ -2,8 +2,8 @@ package Types;
 
 
 public class CompleteName {
-    private String name;
-    private String lastName;
+    private final String name;
+    private final String lastName;
 
     public CompleteName(String name, String lastName) {
         this.name = name;
