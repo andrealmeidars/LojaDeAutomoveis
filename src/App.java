@@ -17,7 +17,7 @@ public class App {
              new TypeOfEmployee("Salesman"),
              new Salary(1200)
     );
-        vendedor.setTotalVendasMes(1000);
+        vendedor.setAllSales(1000);
 
 
 

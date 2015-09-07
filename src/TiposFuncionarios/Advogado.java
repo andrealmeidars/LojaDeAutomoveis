@@ -28,7 +28,7 @@ public class Advogado {
 //
 //
 //
-//    public void enviaParaImpressaoSalario(ImprimeTela imprime){
+//    public void sendoToPrint(ImprimeTela imprime){
 //
 //        imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
 //    }

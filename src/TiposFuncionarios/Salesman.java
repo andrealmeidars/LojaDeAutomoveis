@@ -22,19 +22,19 @@ public class Salesman implements Bonifica{
         this.salary = salary;
     }
 
-    public void setTotalVendasMes(double value){
+    public void setAllSales(double value){
         this.totalVendasMes = value;
     }
 
 
-    public void enviaParaImpressaoSalario(ImprimeTela imprime){
+    public void sendToPrint(ImprimeTela imprime){
        // System.out.print"dentro da funcao");
        // imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
     }
 
 
 
-    public double calculaBonificacao() {
+    public double toPay() {
 
 //            if (getTotalVendasMes() <= 0) {
 //                throw  new NullPointerException();
