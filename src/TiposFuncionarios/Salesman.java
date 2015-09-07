@@ -3,7 +3,7 @@ package TiposFuncionarios;
 import Types.*;
 
 public class Salesman implements Bonifica{
-    private ImprimeTela imprime;
+    private PrintConsole imprime;
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
@@ -27,7 +27,7 @@ public class Salesman implements Bonifica{
     }
 
 
-    public void sendToPrint(ImprimeTela imprime){
+    public void sendToPrint(PrintConsole imprime){
        // System.out.print"dentro da funcao");
        // imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
     }

@@ -1,8 +1,8 @@
 package TiposFuncionarios;
 
-import Types.ImprimeTela;
+import Types.PrintConsole;
 
 public interface Bonifica {
     double toPay();
-    void sendToPrint(ImprimeTela imprime);
+    void sendToPrint(PrintConsole imprime);
 }

@@ -5,7 +5,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        ImprimeTela imprime = new ImprimeTela();
+        PrintConsole print = new PrintConsole();
 
 
 

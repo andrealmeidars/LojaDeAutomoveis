@@ -4,7 +4,7 @@ package TiposFuncionarios;
 // TODO  refactoring class
 
 public class Contador{
-//    private ImprimeTela imprime;
+//    private PrintConsole imprime;
 //    private NomeFuncionario nomeFuncionario;
 //    private DadosCadastraisFuncionario dadosCadastraisFuncionario;
 //    private AbonoMensalFixo abonoMensalFixo;
@@ -27,7 +27,7 @@ public class Contador{
 //
 //
 //
-//    public void sendoToPrint(ImprimeTela imprime){
+//    public void sendoToPrint(PrintConsole imprime){
 //
 //        imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
 //    }
