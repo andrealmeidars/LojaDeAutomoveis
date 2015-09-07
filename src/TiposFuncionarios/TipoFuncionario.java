@@ -5,7 +5,7 @@ package TiposFuncionarios;
  */
 public enum TipoFuncionario {
 
-    Vendedor("Vendedor 1"), DIRETOR("");
+    Vendedor("Salesman 1"), DIRETOR("");
 
     String value;
 

@@ -2,7 +2,7 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Vendedor  implements Bonifica{
+public class Salesman implements Bonifica{
     private ImprimeTela imprime;
     private Id id;
     private CompleteName completeName;
@@ -13,7 +13,7 @@ public class Vendedor  implements Bonifica{
     private double totalVendasMes = 0;
 
 
-    public Vendedor(Id id, CompleteName completeName, LikeName likeName, Address address, TypeOfEmployee typeOfEmployee, Salary salary) {
+    public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, TypeOfEmployee typeOfEmployee, Salary salary) {
         this. id = id;
         this.completeName = completeName;
         this.likeName = likeName;

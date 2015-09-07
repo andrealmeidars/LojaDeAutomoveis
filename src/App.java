@@ -1,4 +1,4 @@
-import TiposFuncionarios.Vendedor;
+import TiposFuncionarios.Salesman;
 import Types.*;
 
 public class App {
@@ -9,12 +9,12 @@ public class App {
 
 
 
-         Vendedor vendedor = new Vendedor(
+         Salesman vendedor = new Salesman(
              new Id(1234),
              new CompleteName("Joao", "Gonçalves"),
              new LikeName("Jo"),
              new Address("Rua x", 122, "Fundos", "Tristeza"),
-             new TypeOfEmployee("Vendedor"),
+             new TypeOfEmployee("Salesman"),
              new Salary(1200)
     );
         vendedor.setTotalVendasMes(1000);
