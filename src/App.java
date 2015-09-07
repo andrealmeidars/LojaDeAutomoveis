@@ -5,11 +5,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        PrintConsole print = new PrintConsole();
-
-
-
-         Salesman vendedor = new Salesman(
+         Salesman salesman = new Salesman(
              new Id(1234),
              new CompleteName("Joao", "Gonçalves"),
              new LikeName("Jo"),
@@ -17,7 +13,8 @@ public class App {
              new TypeOfEmployee("Salesman"),
              new Salary(1200)
     );
-        vendedor.setAllSales(1000);
+        salesman.setTotalSales(1000);
+        salesman.toPay();
 
 
 

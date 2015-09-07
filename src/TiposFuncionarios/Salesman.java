@@ -2,15 +2,15 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Salesman implements Bonifica{
-    private PrintConsole imprime;
+public class Salesman implements payMethod {
+    private PrintConsole print;
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
     private Salary salary;
-    private double totalVendasMes = 0;
+    private double totalSales;
 
 
     public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, TypeOfEmployee typeOfEmployee, Salary salary) {
@@ -20,27 +20,18 @@ public class Salesman implements Bonifica{
         this.address = address;
         this.typeOfEmployee = typeOfEmployee;
         this.salary = salary;
+        this.print = new PrintConsole();
     }
 
-    public void setAllSales(double value){
-        this.totalVendasMes = value;
-    }
-
-
-    public void sendToPrint(PrintConsole imprime){
-       // System.out.print"dentro da funcao");
-       // imprime.imprimeNatela(getNome(), this.getTipoFuncionario(), calculaBonificacao());
+    public void setTotalSales(double value){
+        this.totalSales = value;
     }
 
 
+    public void toPay() {
 
-    public double toPay() {
+        double valueTopay =  salary.getSalary() + ((totalSales * 10)/100);
+        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
 
-//            if (getTotalVendasMes() <= 0) {
-//                throw  new NullPointerException();
-//        }
-//        // 10% do total de vendas
-//       return  dadosCadastraisFuncionario.getSalarioBruto() + ((totalVendasMes * 10)/100);
-    return 0;
     }
 }
