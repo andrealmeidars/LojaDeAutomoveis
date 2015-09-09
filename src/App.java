@@ -10,11 +10,14 @@ public class App {
              new CompleteName("Joao", "Gonçalves"),
              new LikeName("Jo"),
              new Address("Rua x", 122, "Fundos", "Tristeza"),
-             new TypeOfEmployee("Salesman"),
              new Salary(1200)
     );
         salesman.setTotalSales(1000);
         salesman.toPay();
+
+
+
+
 
 
 

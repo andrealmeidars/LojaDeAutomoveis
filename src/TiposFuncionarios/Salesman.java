@@ -13,12 +13,12 @@ public class Salesman implements payMethod {
     private double totalSales;
 
 
-    public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, TypeOfEmployee typeOfEmployee, Salary salary) {
+    public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary) {
         this. id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
-        this.typeOfEmployee = typeOfEmployee;
+        this.typeOfEmployee = new TypeOfEmployee("Salesman");
         this.salary = salary;
         this.print = new PrintConsole();
     }
