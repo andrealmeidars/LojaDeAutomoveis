@@ -3,7 +3,7 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Lawyer {
+public class Lawyer implements payMethod {
     private PrintConsole print;
     private Id id;
     private CompleteName completeName;
@@ -22,5 +22,13 @@ public class Lawyer {
         this.typeOfEmployee = new TypeOfEmployee("Lawyer");
         this.salary = salary;
         this.allowance = allowance;
+    }
+
+
+    public void toPay() {
+
+        double valueTopay =  salary.getSalary() + allowance;
+        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
+
     }
 }
