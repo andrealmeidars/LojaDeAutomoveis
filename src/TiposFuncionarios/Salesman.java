@@ -21,6 +21,7 @@ public class Salesman implements payMethod {
         this.typeOfEmployee = new TypeOfEmployee("Salesman");
         this.salary = salary;
         this.print = new PrintConsole();
+
     }
 
     public void setTotalSales(double value){
@@ -30,8 +31,13 @@ public class Salesman implements payMethod {
 
     public void toPay() {
 
-        double valueTopay =  salary.getSalary() + ((totalSales * 10)/100);
-        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
+        if (totalSales <= 0){
+            throw new NullPointerException();
+        }else {
+
+            double valueTopay = salary.getSalary() + ((totalSales * 10) / 100);
+            print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
+        }
 
     }
 }

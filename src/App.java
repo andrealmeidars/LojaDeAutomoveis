@@ -12,7 +12,7 @@ public class App {
              new Address("Rua x", 122, "Fundos", "Tristeza"),
              new Salary(1200)
     );
-        salesman.setTotalSales(1000);
+        //salesman.setTotalSales(1000);
         salesman.toPay();
 
 
