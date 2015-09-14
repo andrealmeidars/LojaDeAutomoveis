@@ -3,7 +3,7 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Counters {
+public class Counter {
     private PrintConsole print;
     private Id id;
     private CompleteName completeName;
@@ -14,12 +14,12 @@ public class Counters {
     private double allowance;
 
 
-    public Counters(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double allowance) {
+    public Counter(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double allowance) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
-        this.typeOfEmployee = new TypeOfEmployee("Counters");
+        this.typeOfEmployee = new TypeOfEmployee("Counter");
         this.salary = salary;
         this.allowance = allowance;
     }
