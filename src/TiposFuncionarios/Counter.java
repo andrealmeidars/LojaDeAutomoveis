@@ -3,7 +3,7 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Counter {
+public class Counter implements payMethod {
     private PrintConsole print;
     private Id id;
     private CompleteName completeName;
