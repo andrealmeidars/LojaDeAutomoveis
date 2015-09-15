@@ -27,6 +27,14 @@ public class Salesman implements Employee {
         return  payStrategy.calculateSalary();
     }
 
+    public  String getName(){
+        return completeName.getName();
+    }
+
+    public String getTypeOfEmployee (){
+        return typeOfEmployee.getEmployee();
+    }
+
 
 
 

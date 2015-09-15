@@ -11,6 +11,8 @@ public class App {
 
     public static void main(String[] args) {
 
+        PrintConsole print = new PrintConsole();
+
         Salesman salesman = new Salesman(
                 new Id(1234),
                 new CompleteName("Joao", "Gonçalves"),
@@ -49,20 +51,19 @@ public class App {
 
 
 
+        List<Employee> employees = new ArrayList<>();
+        employees.add(salesman);
+        employees.add(counter);
+        employees.add(lawyer);
+        employees.add(manager);
+        employees.add(director);
 
 
+        for (Employee employee : employees){
 
-//        salesman.calculateSalary();
-//
-//
-//        List<Employee> employees = new ArrayList<>();
-//
-//        employees.add(new Counter());
-//        employees.add(new Director());
-//
-//        for (Employee employee : employees){
-//            employee.getSalary();
-//        }
+            print.printOutPut(employee.getName(), employee.getTypeOfEmployee(), employee.getSalary());
+
+        }
 
 
 
