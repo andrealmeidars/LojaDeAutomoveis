@@ -19,6 +19,7 @@ public class Manager implements Employee {
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Manager");
+        this.payStrategy = payStrategy;
 
     }
 
