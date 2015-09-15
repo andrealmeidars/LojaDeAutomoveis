@@ -11,24 +11,29 @@ public class Director implements payMethod {
     private Address address;
     private TypeOfEmployee typeOfEmployee;
     private Salary salary;
-    private double allowance;
+    private double overTimeCount;
 
 
-    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double allowance) {
+
+    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double overTimeCount) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Director");
         this.salary = salary;
-        this.allowance = allowance;
+        this.overTimeCount = overTimeCount;
+
     }
 
 
     public void toPay() {
 
-        double valueTopay =  salary.getSalary() + allowance;
+        double overTimeValue = (salary.getSalary() * 2) / 100;
+
+        double valueTopay =   overTimeValue * overTimeCount;
         print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
+
 
     }
 }
