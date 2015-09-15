@@ -8,7 +8,6 @@ import org.junit.Test;
 public class SalesmanTest {
 
     @Test(expected = NullPointerException.class)
-
     public void ifTotalSalesIsZero() throws Exception{
 
         Salesman salesman = new Salesman(
@@ -18,6 +17,6 @@ public class SalesmanTest {
                 new Address("Rua x", 122, "Fundos", "Tristeza"),
                 new Salary(1200)
         );
-         salesman.toPay();
+         salesman.calculateSalary();
 }
 }

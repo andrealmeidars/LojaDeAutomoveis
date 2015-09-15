@@ -3,32 +3,29 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Lawyer implements payMethod {
-    private PrintConsole print;
+public class Lawyer implements Employee {
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
     private Salary salary;
-    private double allowance;
+    private PayStrategy payStrategy;
 
 
-    public Lawyer(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double allowance) {
+    public Lawyer(Id id, CompleteName completeName, LikeName likeName, Address address,PayStrategy payStrategy) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Lawyer");
-        this.salary = salary;
-        this.allowance = allowance;
+        this.payStrategy = payStrategy;
     }
 
 
-    public void toPay() {
-
-        double valueTopay =  salary.getSalary() + allowance;
-        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
-
+    public double getSalary() {
+        return  payStrategy.calculateSalary();
     }
+
+
 }

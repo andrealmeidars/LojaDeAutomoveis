@@ -3,37 +3,29 @@ package TiposFuncionarios;
 import Types.*;
 
 
-public class Director implements payMethod {
-    private PrintConsole print;
+public class Director implements Employee {
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
-    private Salary salary;
-    private double overTimeCount;
+    private PayStrategy payStrategy;
 
 
 
-    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double overTimeCount) {
+
+    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, PayStrategy payStrategyt) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Director");
-        this.salary = salary;
-        this.overTimeCount = overTimeCount;
+        this.payStrategy = payStrategyt;
 
     }
 
-
-    public void toPay() {
-
-        double overTimeValue = (salary.getSalary() * 2) / 100;
-
-        double valueTopay =   overTimeValue * overTimeCount;
-        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
-
-
+    @Override
+    public double getSalary(){
+        return  payStrategy.calculateSalary();
     }
 }

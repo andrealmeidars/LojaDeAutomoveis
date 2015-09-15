@@ -1,43 +1,33 @@
 package TiposFuncionarios;
 
+
 import Types.*;
 
-public class Salesman implements payMethod {
-    private PrintConsole print;
+public class Salesman implements Employee {
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
-    private Salary salary;
-    private double totalSales;
+    private  PayStrategy payStrategy;
 
 
-    public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary) {
-        this. id = id;
+    public Salesman(Id id, CompleteName completeName, LikeName likeName, Address address, PayStrategy payStrategy) {
+        this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Salesman");
-        this.salary = salary;
-        this.print = new PrintConsole();
+        this.payStrategy = payStrategy;
 
     }
 
-    public void setTotalSales(double value){
-        this.totalSales = value;
+
+    public double getSalary() {
+        return  payStrategy.calculateSalary();
     }
 
 
-    public void toPay() {
 
-        if (totalSales <= 0){
-            throw new NullPointerException();
-        }else {
 
-            double valueTopay = salary.getSalary() + ((totalSales * 10) / 100);
-            print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
-        }
-
-    }
 }

@@ -3,34 +3,26 @@ package TiposFuncionarios;
 
 import Types.*;
 
-public class Manager implements payMethod {
-    private PrintConsole print;
+public class Manager implements Employee {
     private Id id;
     private CompleteName completeName;
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
-    private Salary salary;
     private double overTimeCount;
+    private PayStrategy payStrategy;
 
 
-    public Manager(Id id, CompleteName completeName, LikeName likeName, Address address, Salary salary, double overTimeCount) {
+    public Manager(Id id, CompleteName completeName, LikeName likeName, Address address, PayStrategy payStrategy) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Manager");
-        this.salary = salary;
-        this.overTimeCount = overTimeCount;
+
     }
 
-
-    public void toPay() {
-
-        double overTimeValue = (salary.getSalary() * 2) / 100;
-
-        double valueTopay =   overTimeValue * overTimeCount;
-        print.printOutPut(completeName.getName(), typeOfEmployee.getEmployee(), valueTopay);
-
+    public double getSalary() {
+        return  payStrategy.calculateSalary();
     }
 }
