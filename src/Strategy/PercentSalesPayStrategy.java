@@ -2,15 +2,12 @@ package Strategy;
 
 
 import TiposFuncionarios.PayStrategy;
-import Types.CompleteName;
 import Types.Salary;
-import Types.TypeOfEmployee;
+
 
 public class PercentSalesPayStrategy implements PayStrategy{
     private static final int BONUS_PERCENTAGE = 10;
     private Salary salary;
-    private CompleteName completeName;
-    private TypeOfEmployee typeOfEmployee;
     private double totalSales;
 
 
