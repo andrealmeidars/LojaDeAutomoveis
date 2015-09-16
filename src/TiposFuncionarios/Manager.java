@@ -9,7 +9,6 @@ public class Manager implements Employee {
     private LikeName likeName;
     private Address address;
     private TypeOfEmployee typeOfEmployee;
-    private double overTimeCount;
     private PayStrategy payStrategy;
 
 
