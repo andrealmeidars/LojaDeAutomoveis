@@ -27,10 +27,12 @@ public class Counter implements Employee{
         return  payStrategy.calculateSalary();
     }
 
+    @Override
     public  String getName(){
         return completeName.getName();
     }
 
+    @Override
     public String getTypeOfEmployee (){
         return typeOfEmployee.getEmployee();
     }

@@ -22,16 +22,17 @@ public class Lawyer implements Employee {
         this.payStrategy = payStrategy;
     }
 
-
+    @Override
     public double getSalary() {
         return  payStrategy.calculateSalary();
-
     }
 
+    @Override
     public  String getName(){
         return completeName.getName();
     }
 
+    @Override
     public String getTypeOfEmployee (){
         return typeOfEmployee.getEmployee();
     }

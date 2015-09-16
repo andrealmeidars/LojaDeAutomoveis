@@ -12,15 +12,13 @@ public class Director implements Employee {
     private PayStrategy payStrategy;
 
 
-
-
-    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, PayStrategy payStrategyt) {
+    public Director(Id id, CompleteName completeName, LikeName likeName, Address address, PayStrategy payStrategy) {
         this.id = id;
         this.completeName = completeName;
         this.likeName = likeName;
         this.address = address;
         this.typeOfEmployee = new TypeOfEmployee("Director");
-        this.payStrategy = payStrategyt;
+        this.payStrategy = payStrategy;
 
     }
 
@@ -29,10 +27,12 @@ public class Director implements Employee {
         return  payStrategy.calculateSalary();
     }
 
+    @Override
     public  String getName(){
         return completeName.getName();
     }
 
+    @Override
     public String getTypeOfEmployee (){
         return typeOfEmployee.getEmployee();
     }
