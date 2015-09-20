@@ -24,11 +24,5 @@ public class PercentSalesPayStrategy implements PayStrategy{
         return salary.getSalary() + ((totalSales * BONUS_PERCENTAGE) / 100);
     }
 
-    public  String getName(){
-        return completeName.getName();
-    }
-
-    public String getTypeOfEmployee (){
-        return typeOfEmployee.getEmployee();
-    }
+    
 }
